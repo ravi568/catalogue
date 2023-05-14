@@ -2,5 +2,10 @@ component: catalogue
 params: "DOCUMENTDB:prod.catalogue.mongo,MONGO_URL:prod.docdb.url.catalogue"
 
 
+schemaLoadJob:
+  create: true
+  type: mongo
+
+
 #  Environment=DOCUMENTDB={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.mongo', region='us-east-1')}}
 #  Environment=MONGO_URL="{{ lookup('amazon.aws.aws_ssm', '{{env}}.docdb.url.{{component}}', region='us-east-1')}}"
